@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>まくら一覧・まくらベーシック 実装の手順（ご提案）</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>まくら 実装の手順（ご確認のあとにお渡しします）</title><style>
 :root{--fg:#1d2433;--sub:#5b6475;--line:#d9dee7;--bg:#fff;--soft:#f5f7fa;--acc:#1B224C;--code:#f3f4f7}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:"Yu Gothic","YuGothic","Hiragino Sans","Noto Sans JP",Meiryo,sans-serif;line-height:1.8;font-size:15px}
 main{max-width:980px;margin:0 auto;padding:24px 16px 80px}h1{font-size:24px;margin:8px 0 16px}h2{font-size:20px;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--acc)}
@@ -11,107 +11,10 @@ pre{background:var(--code);padding:12px;border-radius:6px;overflow-x:auto;font-s
 button.copy{font:inherit;font-size:12.5px;padding:3px 10px;border:1px solid var(--acc);background:#fff;color:var(--acc);border-radius:4px;cursor:pointer}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:8px;padding:14px 16px}.card h3{margin:0 0 6px}
 .lab{font-size:12px;color:var(--sub)}
-</style></head><body><main><h1 id="h-73b7ba66">まくら一覧・まくらベーシック：実装の手順（ご提案）</h1>
-<p>施策管理表No.31「まくら一覧に『寝返りしやすい枕』の節と、マットレスへの導線を足す」の見本と手順です。<strong>ご確認いただくこと（1〜5）のお返事の前の、ご提案の版です。</strong> お返事で作業の範囲が変わるため、お返事をいただいてから実装してください。見本は、2026年11月19日の公開中のページに変更を差し込んだもので、赤枠が足す・変える箇所です。</p>
-<h2 id="h-394a9044">1. ご確認いただくこと</h2>
-<div class="tw"><table><thead><tr><th>番号</th><th>ご確認いただくこと</th><th>お返事までの扱い</th></tr></thead><tbody><tr><td>1</td><td>よくあるご質問の「リムネまくら」の説明（横幅・高さ・柔らかさ・マットレスとの相性）は、まくらベーシックとハイブリッドエアーの両方に当てはまりますか</td><td>設計の説明は、まくらベーシックだけに付けています</td></tr><tr><td>2</td><td>よくあるご質問の「リムネまくらを、マットレスの頂点に合わせて設置頂くことで、身体の位置が、マットレスの溝部分にぴったりと沿うように設計されております」は、どのモデルのことですか</td><td>今回の文には入れていません（作業は止めません）</td></tr><tr><td>3</td><td>まくら一覧のtitle・h1・metaを、3章の値に変えてよいですか（今のh1の「首・肩の負担を解き放つ」「「深い回復」を支える」は効果の表現に近いため、外す案です）</td><td>ブロック①は反映しません</td></tr><tr><td>4</td><td>ブロック⑤（マットレス一覧などの送り先）の「回復」の表現を、3章の変更案のとおり直せますか。ほかの表現（「腰が痛い、熟睡できない」という悩みを持つ方に向けて〈マットレス一覧のmeta〉、「身体が痛くて寝付けない」という方に向けて〈スフエアーモデル＋まくらベーシックのセットのmeta〉、「包み込まれるリカバリー体験を。」「究極の体圧分散で全身の負担を軽減」「秒で眠るマットレス。」「5つ星ホテルを超える寝心地」「まるで5つ星ホテルを体験できるような」）も直すかどうか</td><td>直ったことを公開ページで確かめるまで、その送り先へのリンクは出しません</td></tr><tr><td>5</td><td>ブロック②③④の文を、まくら一覧とまくらベーシックの商品ページに入れてよいですか</td><td>②③④は公開しません</td></tr></tbody></table></div>
-<h2 id="h-5af9fff8">2. 変える箇所</h2>
-<div class="tw"><table><thead><tr><th>ブロック</th><th>ページ</th><th>内容</th></tr></thead><tbody><tr><td>①</td><td>まくら一覧（<a href="https://limne.jp/collections/pillow">https://limne.jp/collections/pillow</a> ）</td><td>title・h1・metaを変える</td></tr><tr><td>②③</td><td>まくら一覧</td><td>商品の並びの直後、ブランドの文の前に、節を2つ足す（「寝返りしやすい枕を選ぶときに見るところ」「枕と合わせて確かめたい、マットレスの設計」）</td></tr><tr><td>④</td><td>まくらベーシック（<a href="https://limne.jp/products/limne_pillow-basic">https://limne.jp/products/limne_pillow-basic</a> ）</td><td>商品情報の欄の「3・6・12回払いは本人確認が必要となります」の直後（「素材・サイズ」の上）に、文とリンクを1つ足す</td></tr><tr><td>⑤</td><td>マットレス一覧（<a href="https://limne.jp/collections/mattress">https://limne.jp/collections/mattress</a> ）、スフエアーモデル＋まくらベーシックのセット（<a href="https://limne.jp/products/mattress-souffair_pillow-basic">https://limne.jp/products/mattress-souffair_pillow-basic</a> ）</td><td>「回復」を含む文だけを直す（ほかの文は今のまま）</td></tr></tbody></table></div>
-<h2 id="h-457c5e34">3. 設定値</h2>
-<div class="tw"><table><thead><tr><th>項目</th><th>今</th><th>変更後</th></tr></thead><tbody><tr><td>まくら一覧：検索結果の一覧のタイトル</td><td>まくら一覧｜高さ・素材で選ぶ独自素材の体圧分散設計-リムネ【公式】</td><td>寝返りしやすい枕の一覧｜横幅62・65cmのリムネまくら-リムネ【公式】</td></tr><tr><td>まくら一覧：検索結果の一覧の説明</td><td>LIMNEのまくら一覧。リムネまくらベーシック19,900円とハイブリッドエアー27,900円の2種類に加え、特殊ケア繊維NAGARERU枕カバー付きセット、マットレスとのセットも掲載しています。</td><td>寝返りしやすい枕を、横幅・高さ・素材で選べるリムネのまくら一覧。まくらベーシック（62×37×9cm）と、表裏上下で4通りの寝心地になるハイブリッドエアー（65×40×8.5cm）。まくらベーシックは、リムネマットレスとの相性を考えて開発しています。</td></tr><tr><td>まくら一覧：コレクションの説明のh1（h1の行だけ替える）</td><td>理想の寝姿勢で首・肩の負担を解き放つ。独自素材の体圧分散が「深い回復」を支えるまくら一覧</td><td>寝返りしやすい枕を、横幅・高さで選べるリムネのまくら一覧</td></tr><tr><td>マットレス一覧：h1</td><td>「溶ける」寝心地で活動モードをOFFに。理想の体圧分散で「身体の回復」を支えるマットレス一覧</td><td>「溶ける」寝心地で活動モードをOFFに。理想の体圧分散で身体を支えるマットレス一覧</td></tr><tr><td>マットレス一覧：検索結果の一覧の説明</td><td>…至福の寝心地と理想の寝姿勢を両立し、身体への負担を徹底軽減することで、結果として深い休息と翌朝の確かな回復をサポート。包み込まれるリカバリー体験を。…</td><td>…至福の寝心地と理想の寝姿勢を両立。包み込まれるリカバリー体験を。…（前後は今のまま）</td></tr><tr><td>スフエアーモデル＋まくらベーシックのセット：検索結果の一覧の説明</td><td>…全身を包み込むような至福の寝心地と理想の寝姿勢を両立し、結果としてスムーズな寝返りと深い休息による最高の回復時間をサポートします。</td><td>…全身を包み込むような至福の寝心地と理想の寝姿勢を両立します。（前は今のまま）</td></tr></tbody></table></div>
-<p>2026年11月19日の時点で、titleの末尾に「 – LIMNEオンラインショップ」は付かなくなっています。入れた値がそのまま検索結果の一覧のタイトルになります。</p>
-<h2 id="h-ac2b94dc">4. 進め方</h2>
-<p>テーマのファイルは足しません。テーマエディタの「カスタムLiquid」（まくらベーシックの商品ページで今も使っているものと同じ）に貼るだけで入れます。テーマの複製・コードの編集・新しいテンプレートは要りません。公開中のテーマで保存した時点で公開ページに出るため、②③④は公開の日に入れます。保存する前のテーマエディタの画面で、見た目を確かめられます。</p>
-<ol><li>作業1（計測）：5章のとおりGTMを設定します（リンクを押すとイベントが届く設定。リンクが出る前に設定しておいて問題ありません）</li><li>作業2（送り先の表現）：確認4のお返事のとおり、⑤を直します。直ったら、LANYが公開ページで確かめ、リンクを出してよい送り先をお伝えします</li><li>作業3（公開の日、②③）：「オンラインストア」→「テーマ」→ 公開中のテーマの「カスタマイズ」（画面によっては「テーマを編集」）→ 上部のページの選択で「コレクション」→ まくら一覧が使っているテンプレートを開きます（プレビューするコレクションを「まくら」にする）。「セクションを追加」→「カスタムLiquid」を足し、商品一覧のセクションの直後、ブランドの文（「LIMNE（リムネ）では…」の文章のセクション）の前に置きます。カスタムLiquidの欄に、<code>code/pillow_list.liquid</code> の中身をすべて貼ります（手順書のページの8章の「コピー」、またはZIPの code フォルダのファイルをメモ帳で開いて全文をコピー）</li><li>作業3（リンクの切り替え）：貼った中身の先頭にある <code>{%- assign link_… = false -%}</code> のうち、作業2で LANY がお伝えした送り先だけ <code>false</code> を <code>true</code> に書き換えます。<code>false</code> のままの送り先へのリンクは出ません（4つとも <code>false</code> なら、ボタンの並びごと出ません）。見た目を見本と比べてから「保存」を押します</li><li>作業3（公開の日、④）：同じく「カスタマイズ」で「商品」→ まくらベーシックが使っているテンプレートを開きます（プレビューする商品を「まくらベーシック」にする）。商品情報のセクションの「3・6・12回払いは本人確認が必要となります」のブロックの直後に「ブロックを追加」で、そのブロックと同じ種類のブロック（Liquid や HTML を書ける欄のあるもの。Impulse では「HTML」や「カスタムLiquid」などと表示されます。迷ったら、今の「3・6・12回払い」のブロックを開いて種類の名前を確かめてください）を足し、欄に <code>code/pillow_basic_note.liquid</code> の中身をすべて貼ります。マットレス一覧へのリンクは、<code>link_mattress_list</code> を作業4と同じように切り替えます。「保存」を押します</li><li>作業4：①のtitle・meta・h1を変えます（確認3のお返事のあと。「商品管理」→「コレクション」→「まくら」）</li></ol>
-<p>貼った中身は、ハンドルが pillow のコレクション・limne_pillow-basic の商品だけに出るようにしてあります。ほかのコレクション・商品が同じテンプレートを使っていても、文は出ません。ただし、テーマがブロックの外側に付ける枠は残るため、同じテンプレートを使うほかの商品があれば、余白が増えていないかを6章で確かめてください（まくらベーシックのテンプレートは <code>pillow_new01</code> です。2026年11月19日の公開ページで確認）。あとでリンクを出すときは、同じカスタムLiquidの欄を開いて <code>false</code> を <code>true</code> にするだけです。</p>
-<h2 id="h-b1528c43">5. 計測（GTMの設定）</h2>
-<div class="tw"><table><thead><tr><th>項目</th><th>設定</th></tr></thead><tbody><tr><td>対象のリンク</td><td>data-lm-link="pillow-to-mattress" が付いたリンク（③の4つ、④の1つ）</td></tr><tr><td>発火の条件</td><td>上のリンクのクリック（1回のクリックで1回）</td></tr><tr><td>イベント名（案）</td><td>pillow_to_mattress_click（今の命名に合わせて決めてください）</td></tr><tr><td>見分ける値</td><td>link_place＝data-lm-place の値（pillow_list_s3／pillow_basic_pdp）、link_dest＝data-lm-dest の値（mattress_list／set_souffair_basic／set_rich_basic／set_entry_basic）、link_url＝リンク先のURL</td></tr></tbody></table></div>
-<h2 id="h-8f0fbbdc">6. 公開前と公開後の確認</h2>
-<ul><li>②③④の文が、<code>code/</code> のファイルと同じ。見た目が見本と同じ（パソコンとスマートフォン。見本はリンクをすべて出した状態です）</li><li>h1が1つだけ。出したリンクがすべて開く。LANYがお伝えした送り先だけにリンクが出ている</li><li>他のコレクション（例：<a href="https://limne.jp/collections/mattress">https://limne.jp/collections/mattress</a> ）に②③が出ていない</li><li>まくらベーシックと同じテンプレート（<code>pillow_new01</code>）を使う商品がほかにあれば、その商品のページで、商品情報の「3・6・12回払い」の下の余白が、作業の前と変わっていない</li><li>GTMのプレビューで、③④のリンクを押すとイベントが1回ずつ届く。公開後は、GA4のリアルタイムで届く</li><li>Search Console の「URL検査」で、まくら一覧の「インデックス登録をリクエスト」を押す（LANYが行います）</li></ul>
-<h2 id="files">8. ファイルの中身（コピー用）</h2>
-<p>どのファイルも「コピー」でクリップボードに入ります。一式は <a href="limne-pillow-shopify.zip">limne-pillow-shopify.zip</a> でもダウンロードできます（フォルダの名前は手順書と同じ）。</p><p class="lab">貼るファイルは、Shopify公式の検査ツール Theme Check（3.30.1）でエラー0件です。警告は、愛用者インタビューの写真を、公式サイトの画像のURL（https://limne.jp/cdn/shop/… 。Shopifyの配信）で書いていることへの提案、リンクを /collections/… のように書いていることへの書き方の提案だけで、表示には影響しません。</p>
-<div class="file"><h4><span>code/pillow_basic_note.liquid</span><button class="copy" data-t="c11" data-label="コピー">コピー</button></h4><div class="body"><pre id="c11">{%- comment -%}
-  まくらベーシック（https://limne.jp/products/limne_pillow-basic ）の商品情報の欄に足す文とリンク（ブロック④）。
-  テーマエディタで、まくらベーシックのテンプレートの商品情報のセクションに「カスタムLiquid」のブロックを足し、「3・6・12回払いは本人確認が必要となります」のブロックの直後に置いて、その欄にこのファイルの中身をすべて貼る（手順書の4章）。
-  ハンドルが limne_pillow-basic の商品だけに表示する。
-{%- endcomment -%}
-{%- comment -%}
-  リンクを出すかどうかの切り替え。true で出す、false で出さない。
-  送り先のページの表現（手順書の確認4）が直ったことを LANY が確かめたら、その送り先だけ true にする。
-  link_mattress_list：マットレス一覧（https://limne.jp/collections/mattress ）
-{%- endcomment -%}
-{%- assign link_mattress_list = false -%}
-{%- if product.handle == &#x27;limne_pillow-basic&#x27; -%}
-&lt;style&gt;.lm-negaeri-pdp{margin:12px 0 18px;padding:16px 18px;background:#f3f0ed;border-left:2px solid #a4877b;color:#524349;font-size:13px;line-height:1.9;letter-spacing:.04em}.lm-negaeri-pdp p{margin:0 0 8px}.lm-negaeri-pdp p:last-child{margin:0}.lm-negaeri-pdp a{color:#524349;text-decoration:underline;text-underline-offset:3px}&lt;/style&gt;
-&lt;div class=&quot;lm-negaeri-pdp&quot;&gt;
-  &lt;p&gt;まくらベーシックは「仰向け・寝返り・横寝」を考えて、一般的な枕よりも大きめに設計しています。寝返りからそのまま横寝をしても、枕からずれ落ちにくい横幅です。リムネマットレスとの相性を考えて開発しました。&lt;/p&gt;
-  {%- if link_mattress_list -%}&lt;p&gt;&lt;a href=&quot;/collections/mattress&quot; data-lm-link=&quot;pillow-to-mattress&quot; data-lm-place=&quot;pillow_basic_pdp&quot; data-lm-dest=&quot;mattress_list&quot;&gt;マットレス一覧を見る&lt;/a&gt;&lt;/p&gt;{%- endif -%}
-&lt;/div&gt;
-{%- endif -%}
-</pre></div></div>
-<div class="file"><h4><span>code/pillow_list.liquid</span><button class="copy" data-t="c12" data-label="コピー">コピー</button></h4><div class="body"><pre id="c12">{%- comment -%}
-  まくら一覧（https://limne.jp/collections/pillow ）の、商品の並びの下に置く2つの節（ブロック②③）。
-  テーマエディタで、まくら一覧のテンプレートに「カスタムLiquid」のセクションを足し、商品一覧のセクションの直後（ブランドの文の前）に置いて、その欄にこのファイルの中身をすべて貼る（手順書の4章）。
-  ハンドルが pillow のコレクションだけに表示する。
-{%- endcomment -%}
-{%- comment -%}
-  リンクを出すかどうかの切り替え。true で出す、false で出さない。
-  送り先のページの表現（手順書の確認4）が直ったことを LANY が確かめたら、その送り先だけ true にする。
-  link_mattress_list：マットレス一覧（https://limne.jp/collections/mattress ）
-  link_set_souffair_basic：スフエアーモデルとまくらベーシックのセット（https://limne.jp/products/mattress-souffair_pillow-basic ）
-  link_set_rich_basic：リッチコイルモデルとまくらベーシックのセット（https://limne.jp/products/mattress-rich-coil_pillow-basic ）
-  link_set_entry_basic：エントリーモデルとまくらベーシックのセット（https://limne.jp/products/mattress-entry_pillow-basic ）
-{%- endcomment -%}
-{%- assign link_mattress_list = false -%}
-{%- assign link_set_souffair_basic = false -%}
-{%- assign link_set_rich_basic = false -%}
-{%- assign link_set_entry_basic = false -%}
-{%- if collection.handle == &#x27;pillow&#x27; -%}
-&lt;style&gt;
-.lm-negaeri{--ink:#524349;--sub:#756870;--line:#ded7cf;--panel:#f3f0ed;--accent:#a4877b;--btn:#c0a294;max-width:960px;margin:0 auto;padding:64px 20px 8px;color:var(--ink);font-size:15px;line-height:1.95;letter-spacing:.04em}
-.lm-negaeri *{box-sizing:border-box}
-.lm-negaeri .lm-eyebrow{display:block;margin:0 0 6px;text-align:center;font-size:12px;font-weight:500;letter-spacing:.24em;color:var(--sub)}
-.lm-negaeri h2{margin:0 0 28px;text-align:center;font-size:24px;font-weight:400;line-height:1.6;letter-spacing:.12em}
-.lm-negaeri .lm-lead{max-width:760px;margin:0 auto 24px;text-align:center}
-.lm-negaeri .lm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 8px}
-.lm-negaeri .lm-card{padding:22px 22px 18px;background:#fff;border:1px solid var(--line);font-size:14px}
-.lm-negaeri .lm-card h3{margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid var(--line);font-size:16px;font-weight:500;letter-spacing:.08em}
-.lm-negaeri .lm-card p{margin:0;line-height:1.9}
-.lm-negaeri .lm-negaeri__links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:28px 0 24px}
-.lm-negaeri .lm-negaeri__links a{display:inline-block;min-width:280px;padding:14px 26px;border:1px solid var(--btn);border-radius:50px;color:var(--ink);text-align:center;text-decoration:none;font-size:13px;letter-spacing:.12em}
-.lm-negaeri .lm-negaeri__links a:first-child{background:var(--btn);color:#3f3237}
-.lm-negaeri + .lm-negaeri{padding-top:40px}
-@media (max-width:749px){.lm-negaeri{font-size:14px;padding-top:48px}.lm-negaeri h2{font-size:20px}.lm-negaeri .lm-cards{grid-template-columns:1fr}.lm-negaeri .lm-negaeri__links a{display:block;width:100%;min-width:0}}
-&lt;/style&gt;
-&lt;section class=&quot;lm-negaeri lm-negaeri--select&quot; aria-labelledby=&quot;lm-negaeri-select&quot;&gt;
-  &lt;span class=&quot;lm-eyebrow&quot;&gt;POINT&lt;/span&gt;
-  &lt;h2 id=&quot;lm-negaeri-select&quot;&gt;寝返りしやすい枕を選ぶときに見るところ&lt;/h2&gt;
-  &lt;div class=&quot;lm-cards&quot;&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;横幅&lt;/h3&gt;&lt;p&gt;寝返りをすると、頭は枕の上を左右に動きます。まくらベーシックは「仰向け・寝返り・横寝」を考えて、一般的な枕よりも大きめに設計しています。寝返りからそのまま横寝をしても、枕からずれ落ちにくい横幅です（62×37×9cm）。ハイブリッドエアーは65×40×8.5cmです。&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;高さ&lt;/h3&gt;&lt;p&gt;まくらベーシックの高さは、頭が沈み込む分を計算して決めています。高さを調節する付属品はありません。そのままお使いください。&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;柔らかさ&lt;/h3&gt;&lt;p&gt;まくらベーシックは、ふわふわとした柔らかな感触で、頭を適度に沈み込ませます。普段の枕より柔らかく感じることがあります。ハイブリッドエアーは、表裏上下で4通りの寝心地になります。&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;lm-negaeri lm-negaeri--mattress&quot; aria-labelledby=&quot;lm-negaeri-mattress&quot;&gt;
-  &lt;span class=&quot;lm-eyebrow&quot;&gt;MATTRESS&lt;/span&gt;
-  &lt;h2 id=&quot;lm-negaeri-mattress&quot;&gt;枕と合わせて確かめたい、マットレスの設計&lt;/h2&gt;
-  &lt;p class=&quot;lm-lead&quot;&gt;寝返りのしやすさを考えるときは、頭を受ける枕だけでなく、体を支えるマットレスも一緒に確かめてください。まくらベーシックは、リムネマットレスとの相性を考えて開発しました。&lt;/p&gt;
-  &lt;div class=&quot;lm-cards&quot;&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;スフエアーモデル&lt;/h3&gt;&lt;p&gt;身体を面で支え、寝返りのしやすさや通気性に配慮した構造設計&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;リッチコイルモデル&lt;/h3&gt;&lt;p&gt;コイルを上下二層に重ねた「ツインリカバリー構造」で、寝返りがうちやすい設計&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;lm-card&quot;&gt;&lt;h3&gt;エントリーモデル&lt;/h3&gt;&lt;p&gt;独自の「ミルキーコイル」を採用した一層のポケットコイル&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  {%- if link_mattress_list or link_set_souffair_basic or link_set_rich_basic or link_set_entry_basic -%}
-  &lt;div class=&quot;lm-negaeri__links&quot;&gt;
-    {%- if link_mattress_list -%}&lt;a href=&quot;/collections/mattress&quot; data-lm-link=&quot;pillow-to-mattress&quot; data-lm-place=&quot;pillow_list_s3&quot; data-lm-dest=&quot;mattress_list&quot;&gt;マットレス一覧を見る&lt;/a&gt;{%- endif -%}
-    {%- if link_set_souffair_basic -%}&lt;a href=&quot;/products/mattress-souffair_pillow-basic&quot; data-lm-link=&quot;pillow-to-mattress&quot; data-lm-place=&quot;pillow_list_s3&quot; data-lm-dest=&quot;set_souffair_basic&quot;&gt;スフエアーモデルとまくらベーシックのセット&lt;/a&gt;{%- endif -%}
-    {%- if link_set_rich_basic -%}&lt;a href=&quot;/products/mattress-rich-coil_pillow-basic&quot; data-lm-link=&quot;pillow-to-mattress&quot; data-lm-place=&quot;pillow_list_s3&quot; data-lm-dest=&quot;set_rich_basic&quot;&gt;リッチコイルモデルとまくらベーシックのセット&lt;/a&gt;{%- endif -%}
-    {%- if link_set_entry_basic -%}&lt;a href=&quot;/products/mattress-entry_pillow-basic&quot; data-lm-link=&quot;pillow-to-mattress&quot; data-lm-place=&quot;pillow_list_s3&quot; data-lm-dest=&quot;set_entry_basic&quot;&gt;エントリーモデルとまくらベーシックのセット&lt;/a&gt;{%- endif -%}
-  &lt;/div&gt;
-  {%- endif -%}
-&lt;/section&gt;
-{%- endif -%}
-</pre></div></div></main><script>
+</style></head><body><main><h1>まくら一覧・まくらベーシック・ハイブリッドエアー 実装の手順</h1>
+<p>実装の手順とShopify用のソースは、要件メモのご確認（モック一覧へのご記入）と、見本へのご合意のあとにお渡しします。</p>
+<p><a href="index.html">見本の一覧に戻る</a></p>
+</main><script>
 document.addEventListener('click',function(e){var b=e.target.closest('button.copy');if(!b)return;var t=document.getElementById(b.dataset.t);
 if(b.dataset.mode==='rich'){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();}
 else{navigator.clipboard.writeText(t.textContent);}b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);});
