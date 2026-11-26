@@ -12,7 +12,7 @@ button.copy{font:inherit;font-size:12.5px;padding:3px 10px;border:1px solid var(
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:8px;padding:14px 16px}.card h3{margin:0 0 6px}
 .lab{font-size:12px;color:var(--sub)}
 </style></head><body><main><h1>120日間完全返金保証ページ・口コミページ</h1>
-<p>モック一覧の「ご確認いただくこと」へのご回答（2026年11月19日・11月26日）を反映した見本と、Shopifyで作るための手順です。2つとも新しく作るページです。ページごとのテンプレートに「カスタムLiquid」のセクションを足し、Shopify用のファイルを貼るだけで入ります（テーマの複製やコードの編集は要りません）。</p>
+<p>モック一覧の「ご確認いただくこと」へのご回答（2026年11月19日・11月26日）を反映した見本と、Shopifyで作るための手順です。2つとも新しく作るページです。ページごとのテンプレートに、Shopify用のファイルを入れて作ります。入れ方は2通りです。セクションとして足す形（作り方A。テーマの「コードを編集」でファイルを2つ足します）と、「カスタムLiquid」の欄に貼るだけの形（作り方B）です。どちらも、テーマの複製は要りません。</p>
 <div class="cards">
 <div class="card"><h3>120日間完全返金保証</h3><p><a href="guarantee.html">見本を開く</a></p><p class="lab">作るページ：https://limne.jp/pages/120-day-guarantee</p></div>
 <div class="card"><h3>口コミ・評判</h3><p><a href="reviews.html">見本を開く</a></p><p class="lab">作るページ：https://limne.jp/pages/reviews</p></div>
@@ -34,5 +34,7 @@ button.copy{font:inherit;font-size:12.5px;padding:3px 10px;border:1px solid var(
 </main><script>
 document.addEventListener('click',function(e){var b=e.target.closest('button.copy');if(!b)return;var t=document.getElementById(b.dataset.t);
 if(b.dataset.mode==='rich'){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();}
-else{navigator.clipboard.writeText(t.textContent);}b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);});
+else{var sel=function(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='選択しました（Ctrl+Cでコピー）';setTimeout(function(){b.textContent=b.dataset.label},4000);};
+try{navigator.clipboard.writeText(t.textContent).then(function(){b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);},sel);}catch(err){sel();}return;}
+b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);});
 </script></body></html>
