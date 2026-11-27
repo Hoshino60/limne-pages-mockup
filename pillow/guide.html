@@ -17,5 +17,7 @@ button.copy{font:inherit;font-size:12.5px;padding:3px 10px;border:1px solid var(
 </main><script>
 document.addEventListener('click',function(e){var b=e.target.closest('button.copy');if(!b)return;var t=document.getElementById(b.dataset.t);
 if(b.dataset.mode==='rich'){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();}
-else{navigator.clipboard.writeText(t.textContent);}b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);});
+else{var sel=function(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='選択しました（Ctrl+Cでコピー）';setTimeout(function(){b.textContent=b.dataset.label},4000);};
+try{navigator.clipboard.writeText(t.textContent).then(function(){b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);},sel);}catch(err){sel();}return;}
+b.textContent='コピーしました';setTimeout(function(){b.textContent=b.dataset.label},1500);});
 </script></body></html>
